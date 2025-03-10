@@ -2,59 +2,52 @@
 
 
 def reverse_string(s: str) -> str:
-    """
-    Return the input string in reverse order.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The reversed string
-    """
+    L=[]
+    for i in s: 
+        L.append(i)
+    return L[::-1]
     # TODO: Implement this function
     pass
 
 
 def count_vowels(s: str) -> int:
-    """
-    Return the number of vowels (a, e, i, o, u) in the input string.
-    Case-insensitive: both uppercase and lowercase vowels should be counted.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The number of vowels in the string
-    """
+    L= ['a','e','i','o','u','A','E','I','O','U']
+    k=0
+    for i in s :
+        if i in L :
+            k+=1
+    return k
+   
     # TODO: Implement this function
     pass
 
 
 def is_palindrome(s: str) -> bool:
-    """
-    Check if the input string is a palindrome.
-    A palindrome reads the same backward as forward.
-    Spaces and case should be ignored.
+    j = len(s)
+    n= len(s)
+    if j%2 == 0 :
+        A1 = s[:n/2:]
+        A2 = s[n/2::]
 
-    Args:
-        s: Input string
-
-    Returns:
-        True if the string is a palindrome, False otherwise
-    """
+    else :
+        A1 = s[:n//2:]
+        A2 = s[n//2+1::]
+    
+    if A1 == A2[::-1] : 
+        return True
+    return False
+    
     # TODO: Implement this function
     pass
 
 
 def capitalize_words(s: str) -> str:
-    """
-    Capitalize the first letter of each word in the input string.
-
-    Args:
-        s: Input string
-
-    Returns:
-        The input string with the first letter of each word capitalized
-    """
+    mots = s.split()
+    for i in mots : 
+        k = i[0].upper()+i[1::]
+        k=i
+        S = ' '.join(mots)
+        return S
+        
     # TODO: Implement this function
     pass
