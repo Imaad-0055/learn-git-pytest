@@ -30,7 +30,12 @@ def celsius_to_kelvin(celsius: Temperature) -> float:
 
 def kelvin_to_celsius(kelvin: Temperature) -> float:
     C = kelvin - 273.15
-    return C
+    if C >= -273.15 : 
+        return C
+    raise ValueError("Temperature cannot be below absolute zero")
+    
+
 
     # TODO: Implement this function
     pass
+
